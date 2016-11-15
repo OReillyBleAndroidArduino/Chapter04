@@ -118,7 +118,7 @@ public class BlePeripheralsListAdapter extends BaseAdapter {
             peripheralListItemView = new ViewHolder();
             peripheralListItemView.mBroadcastNameTV = (TextView) v.findViewById(R.id.broadcast_name);
             peripheralListItemView.mMacAddressTV = (TextView) v.findViewById(R.id.mac_address);
-            peripheralListItemView.mRssiTV = (TextView) v.findViewById(R.id.power_level);
+            peripheralListItemView.mRssiTV = (TextView) v.findViewById(R.id.rssi);
 
             v.setTag( peripheralListItemView );
         } else {

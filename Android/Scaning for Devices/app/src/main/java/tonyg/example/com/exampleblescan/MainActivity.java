@@ -3,7 +3,10 @@ package tonyg.example.com.exampleblescan;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.le.ScanResult;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -131,7 +134,6 @@ public class MainActivity extends AppCompatActivity {
      * Initialize the Bluetooth Radio
      */
     public void initializeBluetooth() {
-
         try {
             mBleCommManager = new BleCommManager(this);
         } catch (Exception e) {
@@ -147,7 +149,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
 
     /**
      * Start scanning for Peripherals
@@ -227,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
             });
         }
     }
+
 
 
     /**
